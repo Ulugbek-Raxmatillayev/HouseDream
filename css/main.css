@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px 25px;
+}
+
+.enter_btn {
+  position: relative;
+  padding: 0.5rem;
+  background: none;
+  color: rgb(0, 162, 255);
+  font-size: 16px;
+  border: 2px solid rgba(0, 162, 255, 0.521);
+  transition: 0.6s;
+  font-family: Playwrite NG Modern;
+  overflow: hidden;
+  cursor: pointer;
+}
+.enter_btn:hover {
+  color: #f5f5f5;
+}
+.enter_btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: rgb(0, 162, 255);
+  z-index: -1;
+  transition: 0.6s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.enter_btn:hover::before, .enter_btn:active::before, .enter_btn:focus::before {
+  height: 185%;
+}
+
+aside img {
+  max-width: 1600px;
+}
+
+.login_container {
+  max-width: 1600px;
+}
+.login_container .login {
+  display: flex;
+  max-width: 1200px;
+  height: 89vh;
+  border: 5px solid rgb(0, 225, 255);
+  box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.432);
+  margin: 25px 55px;
+  background: rgba(235, 235, 235, 0.4941176471);
+  border-radius: 35px;
+  overflow: hidden;
+}
+.login_container .login .login_img img {
+  width: 65%;
+  height: 100%;
+  filter: brightness(95%);
+}
+.login_container .login .login_reg {
+  margin-left: -5rem;
+  padding: 20px;
+  padding-top: 40px;
+}
+.login_container .login .login_reg h1 {
+  font-size: 32px;
+  font-family: Playwrite NG Modern, sans-serif;
+  padding-bottom: 1rem;
+}
+.login_container .login .login_reg p {
+  font-size: 16px;
+  font-family: Playwrite NG Modern, sans-serif;
+  color: blue;
+  margin-left: -2rem;
+  padding-bottom: 1rem;
+}
+.login_container .login .login_reg .login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.login_container .login .login_reg .login_form input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: transparent;
+  outline: none;
+  border: 2px solid blue;
+  font-size: 16px;
+}
+.login_container .login .login_reg .login_form label {
+  font-family: Playwrite NG Modern, sans-serif;
+  font-size: 14px;
+  position: relative;
+  width: 150px;
+  top: 50px;
+  background: #f5f5f5;
+  left: 8px;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 1326px) {
+  .login_container .login {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 1273px) {
+  .login_container .login_form {
+    left: -5rem;
+    top: -2rem;
+  }
+  .login_container .login .login_reg h1, .login_container .login .login_reg p {
+    margin-left: -4.5rem;
+    text-align: center;
+  }
+  .login_container .login .login_reg p {
+    margin-left: -6.5rem;
+  }
+}
